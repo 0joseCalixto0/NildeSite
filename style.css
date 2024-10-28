@@ -21,6 +21,7 @@
 body {
     background-size: cover;
     background-color: var(--cor-secundaria);
+   
     /*background: rgb(9,29,6) #708871;
 background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgba(62,144,56,1) 100%);
 */}
@@ -70,11 +71,13 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     background-image: url("./assets/palmeirasnilde\ blur.jpg" );
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     filter: blur(3px);
     align-items: center;
     text-align: center;
     width: auto;
     height:fit-content;
+    
 
 
 
@@ -99,7 +102,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 
 }
-
+  
 
 
 .cabecalho {
@@ -108,7 +111,6 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     align-items: center;
     background: var(--cor-terciaria);
     position: fixed;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: auto;
     z-index: 10;
@@ -315,14 +317,11 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 }
 
 .one {
-    
     margin: 5%;
     align-items: center;
-    filter: unset;
-    height: max-content;
     display: grid;
     padding: 5%;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 45% 45%;
     justify-content: center;
 
 
@@ -334,14 +333,12 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     padding: 2rem;
     background-color: var(--cor-terciaria);
     width: auto;
-    
     text-align: center;
     align-items: center;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.26);
     border-radius: 2%;
     justify-content: space-between;
-    gap: 1rem;
-
+    
 
 }
 .feixe2 {
@@ -360,7 +357,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 }
 
 .img_escola1 {
-    width: 90%;
+    width: 77%;
     height: 80%;
     margin: rem;
     border-radius: 2%;
@@ -406,33 +403,34 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 
 
-.services {
+.container_services {
     display: flex;
     height: auto;
     text-align: center;
     align-items: center;
-    margin: 10rem;
+    margin-top: 20rem;
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
+    
 
 
 
 }
 
-.services {
+.serices {
     display: flex;
     height: auto;
     text-align: center;
     align-items: center;
-    margin: 10rem;
+    margin: 1rem;
     flex-direction: column;
-    justify-content: center;
+
 
 
 
 }
 
-.services_cont {
+.services_item {
     width: 15rem;
     height: 24rem;
     display: flex;
@@ -464,7 +462,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 
 .services_list {
-    position: ;
+    /* position: ; */
     padding: rem;
     margin: 1rem;
     display: flex;
@@ -559,7 +557,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     height: 2rem;
     margin: 0rem 0rem 1rem 0rem;
     color: var(--cor-secundaria);
-    border-radius: ;
+    /* border-radius: ; */
 
 }
 
@@ -673,31 +671,8 @@ padding: 0rem 1rem ;
     color: rgb(27, 51, 42);
 }
 
-@media (min-width:1292px) {
-    .cabecalho {
-        display: flex;
-        justify-content: start;
-        align-items: start;
-        gap: 10%;
-        align-items: center;
-        background: var(--cor-terciaria);
-        position: fixed;
-        width: 100%;
-        height: auto;
-        z-index: 10;
-        
-        
+@media (max-width:1292px) {
     
-    
-    }
-    
-    .cabe_inicio {
-        width: 50%;
-        align-items: center;
-        height: 3rem;
-        display: flex;
-        flex-direction: row;
-    }
 
     .contatogeral{
         display: flex;
@@ -705,38 +680,60 @@ padding: 0rem 1rem ;
         justify-items: center;
         align-items: center;
     }
-
-  
-
-   
     
-}
-@media (max-width:1440px) {
-
-    .one {
+    .services_list {
+        /* flex-direction: column; */
         
-        margin:rem ;
-        padding: 1rem;
-        
-        
-
     }
 
-    .descricao_container {
-        justify-content: center;
-        margin-right: 6rem;
-        width: rem;
-        text-align: center;
-
+    .one{
+        height: auto;
+        justify-items: center;
+        grid-template-columns: 50rem; /* Uma única coluna */
+        grid-template-rows: 50% 50%;
+    }
+    .descricao_container{
+        grid-area: 1/1;
+        width: auto;
+        height: auto;
+        
     }
 
-    .descricao_text{
-        text-align: center;
+    .img_escola1{
+        grid-area: 2/1;
     }
 
-    
 }
 
-@media {
+@media (min-width: 1141px) {
+    .teste2{
+        display: none;
+    }
     
+}
+
+@media (max-width: 1140px) {
+
+    .teste1{
+        display: none;
+        flex-direction: row;
+    }
+    .services_cont{
+        align-self: center;
+        
+    }
+
+    .container_services{
+        justify-items: center;
+    }
+ }
+
+ @media (max-width: 650px) {
+    .services_list{
+        flex-direction:column ;
+    }
+
+    .container_services{
+        margin-top: 10rem;
+    }
 }
