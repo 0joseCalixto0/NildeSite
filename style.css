@@ -21,6 +21,7 @@
 body {
     background-size: cover;
     background-color: var(--cor-secundaria);
+    box-sizing: border-box;
    
     /*background: rgb(9,29,6) #708871;
 background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgba(62,144,56,1) 100%);
@@ -92,7 +93,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     padding: 10%;
     align-items: center;
     grid-template-columns: 50% 50%;
-    
+    justify-content: center;
 
 
 
@@ -323,6 +324,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     padding: 5%;
     grid-template-columns: 45% 45%;
     justify-content: center;
+   
 
 
 
@@ -334,10 +336,9 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     background-color: var(--cor-terciaria);
     width: auto;
     text-align: center;
-    align-items: center;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.26);
     border-radius: 2%;
-    justify-content: space-between;
+
     
 
 }
@@ -348,7 +349,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     height: 0.5rem;
     margin: 0.9rem;
     gap: 1rem;
-    align-items: center;
+    
 
     
 
@@ -378,12 +379,12 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 }
 
 .descricao_text {
-    text-align: left;
+
     font-size: var(--tamanho-fonte-texto);
     font-weight: var(--expessura-texto);
     color: var(--cor-principal);
     margin: 1rem;
-    text-align: left;
+    
 
 }
 
@@ -445,7 +446,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.services_cont:hover {
+.services_item:hover {
     transition: all 2s;
     transform: scale(150%);
     background-color: var(--cor-hover);
@@ -687,16 +688,13 @@ padding: 0rem 1rem ;
     }
 
     .one{
-        height: auto;
         justify-items: center;
-        grid-template-columns: 50rem; /* Uma única coluna */
-        grid-template-rows: 50% 50%;
+        grid-template-columns: auto; /* Uma única coluna */
+        grid-template-rows: auto;
     }
+    
     .descricao_container{
-        grid-area: 1/1;
         width: auto;
-        height: auto;
-        
     }
 
     .img_escola1{
@@ -708,7 +706,9 @@ padding: 0rem 1rem ;
 @media (min-width: 1141px) {
     .teste2{
         display: none;
-    }
+        
+    } 
+    
     
 }
 
@@ -716,24 +716,33 @@ padding: 0rem 1rem ;
 
     .teste1{
         display: none;
-        flex-direction: row;
+       
     }
     .services_cont{
         align-self: center;
         
     }
 
-    .container_services{
-        justify-items: center;
-    }
+    
  }
 
  @media (max-width: 650px) {
+
+
+    .descricao_container{
+        margin: 0rem;
+        padding:0 ;
+    }
+
     .services_list{
         flex-direction:column ;
     }
 
     .container_services{
         margin-top: 10rem;
+    }
+
+    .services_item:hover{
+        pointer-events: none;
     }
 }
