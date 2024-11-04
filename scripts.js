@@ -31,5 +31,3 @@ const elements2 = document.querySelectorAll('.hidden2')
 elements2.forEach((element2) =>myobserver2.observe(element2))
 
 
-
-
