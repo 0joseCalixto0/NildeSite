@@ -24,9 +24,9 @@ body {
     background-color: var(--cor-secundaria);
     box-sizing: border-box;
    
-    /*background: rgb(9,29,6) #708871;
+    background: rgb(9,29,6) #708871;
 background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgba(62,144,56,1) 100%);
-*/}
+}
 
 .logo_title {
   width: 5rem;
