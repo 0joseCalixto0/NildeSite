@@ -11,7 +11,8 @@
     --cor-secundaria: #05813d;
     --cor-terciaria: #f8e8d1;
     --cor-quaternaria:rgb(14, 138, 80) ;
-    --cor-hover:#1d6d50b2;
+    --cor-hover:#2e8364;
+    --cor-hover2:#13724cb2;
     --fonte-principal: 'inter';
     --fonte-secundaria: 'Caladea';
     --tamanho-fonte-texto: 1.3rem;
@@ -24,8 +25,8 @@ body {
     background-color: var(--cor-secundaria);
     box-sizing: border-box;
    
-    background: rgb(9,29,6) #708871;
-background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgba(62,144,56,1) 100%);
+    /* background: rgb(9,29,6) #708871;
+background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgba(62,144,56,1) 100%); */
 }
 
 .logo_title {
@@ -71,52 +72,6 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.apre {
-    background-image: url("./assets/palmeirasnilde\ blur.jpg" );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(3px);
-    align-items: center;
-    text-align: center;
-    width: auto;
-    height:fit-content;
-    
-
-
-
-
-
-}
-
-.container {
-    filter: unset;
-    height: max-content;
-    display: grid;
-    padding: 10%;
-    align-items: center;
-    grid-template-columns: 50% 50%;
-    justify-content: center;
-
-
-
-
-
-
-
-
-}
-  
-
-
-
-
-
-
-
-
-
-
 .cabecalho {
     width: 100%;
     display: flex;
@@ -129,6 +84,8 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     z-index: 1;
     
 }
+
+
 
 .logo_cabe {
     display: flex;
@@ -154,10 +111,16 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
+    content: "Nilde Monteiro Xavier";
     
    
 
 
+}
+
+
+.cabe_tit2{
+    display: none;
 }
 
 .cabe_links {
@@ -194,7 +157,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 .cabe_text:hover {
     text-decoration: none;
-    color: yellowgreen;
+   color:var(--cor-hover);
     opacity: 0.7;
 
 }
@@ -208,36 +171,39 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 .menu_icon {
     flex-direction: column;
     display: none;
-    cursor: pointer;
+    cursor:pointer;
     z-index: 2;
 
 }
 
-.menu_icon div {
-    width: 32px;
-    height: 2px;
-    background-color: var(--cor-principal);
-    margin: 8px;
+
+.container_background{
+    background-image: url("./assets/palmeirasnilde\ blur.jpg" );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    height:100vh;
     
-
-
 }
 
-
-
-
-
-
-
-
+.container {
+    filter: unset;
+    height: 50vh;
+    display: grid;
+    padding: 10%;
+    align-items: center;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+}
+  
 .container_box {
     margin: 3% 12%;
     background-color: var(--cor-terciaria);
     width: 30rem;
-    height: 25rem;
+    height: auto;
     border-radius: 2%;
     position: relative;
-    
     box-shadow: inset 0 0 2em #cabca9fd,
     0 0 1em #cabca9fd;
 
@@ -292,12 +258,15 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.second {
+.container2 {
+    display: flex;
     background: var(--cor-secundaria);
     background-image: url("./assets/palmeirasnilde\ \(1\).jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    left: 0;
+    height: 100vh;
     align-items: center;
     
 
@@ -398,34 +367,34 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 
 
-
-
-.container_services {
-    display: flex;
-    height: auto;
-    text-align: center;
-    align-items: center;
-    margin-top: 20rem;
-    flex-direction: column;
-    justify-items: center;
-    
-
-
-
-}
-
-.serices {
+.container3 {
     display: flex;
     height: auto;
     text-align: center;
     align-items: center;
     margin: 1rem;
     flex-direction: column;
+    height: 100vh;
 
 
 
 
 }
+
+.container3_services {
+    display: flex;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    
+
+
+
+}
+
+
 
 .services_item {
     width: 15rem;
@@ -445,7 +414,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 .services_item:hover {
     transition: all 2s;
     transform: scale(150%);
-    background-color: var(--cor-hover);
+    background-color: var(--cor-hover2);
 }
 
 .img_serv {
@@ -501,7 +470,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     margin: rem;
 }
 
-.container3 {
+.container4 {
     align-items: center;
     filter: unset;
     height: max-content;
@@ -576,19 +545,24 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 width: auto;
 box-shadow: 5px 5px 5px #0000006c;
 padding: 0rem 1rem ;
-
+transition:color 1s ease;
 
 }
 .contatolink:hover {
     color:var(--cor-quaternaria);
+
+    
+
 }
 
 
 .contato_title {
+    letter-spacing: px;
     font-size: 3rem;
     font-weight: 500;
-    margin: 1rem;
-    font-family: var(--fonte-secundaria);
+    margin: 1rem 1rem 4rem 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 
 }
 
@@ -731,18 +705,20 @@ padding: 0rem 1rem ;
     
  }
 
- @media (max-width: 768px) {
+ @media (max-width: 1000px) {
     .cabe_links {
       display: flex;
       flex-direction: column;
+      height: 100vh;
       width: 50%;
-      background-color: #333;
+      background-color:#f8e8d1;
       position: absolute;
       top: 60px;
       right: 0;
       transform: translatex(100%);
       opacity: 0;
       transition: transform 1s ease, opacity 1s ease;
+      gap: 10rem;
     }
   
     .menu-toggle:checked + .menu-icon + .cabe_links {
@@ -763,9 +739,23 @@ padding: 0rem 1rem ;
       text-align: center;
       margin: 10px 0;
     }
+
+    .linha{
+        width: 32px;
+        height: 2px;
+        background-color: var(--cor-principal);
+        margin: 8px;
+       
+    }
+    
+    .linhas{
+        
+        cursor: pointer;
+    }
   }
  @media (max-width: 650px) {
 
+    
 
     .descricao_container{
         margin: 0rem;
@@ -784,3 +774,27 @@ padding: 0rem 1rem ;
         pointer-events: none;
     }
 }
+
+@media (max-width: 477px) {
+    .cabe_tit{
+        display: non;
+    }
+}
+
+@media (max-width: 476px) {
+    .cabe_tit{
+        display: none;
+    }
+    .cabe_tit2{
+        display: block;
+    }
+}
+
+
+@media (max-width: 373px) {
+    .cabe_tit2{
+        display: none;
+    }
+}
+
+
