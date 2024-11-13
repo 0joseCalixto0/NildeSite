@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Caladea:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -24,10 +24,6 @@ body {
     background-size: cover;
     background-color: var(--cor-secundaria);
     box-sizing: border-box;
-
-   
-    /* background: rgb(9,29,6) #708871;
-background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgba(62,144,56,1) 100%); */
 }
 
 .logo_title {
@@ -112,7 +108,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     font-family: var(fonte-secundaria);
     text-transform: uppercase;
     letter-spacing: 4px;
-    content: "Nilde Monteiro Xavier";
+    
     
    
 
@@ -178,45 +174,43 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 }
 
 
-.container_background{
-    background-image: url("./assets/palmeirasnilde\ blur.jpg" );
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: blur(0px);
-    
-    
-}
 
 .container {
-    display: grid;
+    display: flex;
     filter: unset;
     height: 92vh;
     align-items: center; 
     justify-content: center;
-    grid-template-columns: 40% 50%;
-    padding: 0rem 10rem;
+    background-image: url("./assets/palmeirasnilde\ \(1\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    
     
 }
   
 .container_box {
     display: flex;
     padding: 2rem;
-    width: 40vh;
+    margin: 0% 20%;
+    width: auto;
     height: auto;
     background-color: var(--cor-terciaria);
-    border-radius: 2%;
     box-shadow: inset 0 0 2em #cabca9fd,
     0 0 1em #cabca9fd;
     flex-direction: column;
     gap: 2rem;
+    
+    align-items: center;
+    text-align: center;
     
 
 
 }
 
 
-.cont_aviso {
+.cnt_aviso {
     font-size: 150%;
     color: var(--cor-principal);
     font-weight: var(--expessura-texto);
@@ -226,12 +220,11 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.container_title {
+.cnt_title {
     font-size: 300%;
     font-weight: 700;
     font-family: var(--fonte-secundaria);
-    align-items: center;
-    text-align: left;
+    
     
 
 }
@@ -263,20 +256,6 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.container2 {
-    padding: 5rem;
-    display: flex;
-    background: var(--cor-secundaria);
-    background-image: url("./assets/palmeirasnilde\ \(1\).jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    left: 0;
-    height: 100vh;
-    align-items: center;
-    
-
-}
 
 
 
@@ -300,7 +279,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.descricao_container {
+.descricao_cnt {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -347,15 +326,37 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.descricao_container2 {
-    padding: 6rem;
-    background-color: #fef3e2da;
-    margin: 5rem;
-    width: 30rem;
-    height: 15rem;
-    text-align: left;
-    border-radius: 2%;
+.container2 {
+    padding: 5rem;
+    display: flex;
+    background: var(--cor-secundaria);
+    background-image: url("./assets/palmeirasnilde\ \(1\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    left: 0;
+    height: 100vh;
+    align-items: center;
+    
 
+}
+
+
+.descricao_cnt2 {
+    
+    filter: none;
+    display: flex;
+    padding: 2rem;
+    width: 40vh;
+    height: auto;
+    background-color: var(--cor-terciaria);
+    border-radius: 2%;
+    box-shadow: inset 0 0 2em #cabca9fd,
+    0 0 1em #cabca9fd;
+    flex-direction: column;
+    gap: 2rem;
+    
+    
 
 }
 
@@ -375,7 +376,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.container3_services {
+.cnt3_services {
     display: flex;
     height: auto;
     text-align: center;
@@ -418,14 +419,14 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     height: 12rem;
     border-radius: 15%;
     align-items: center;
-    margin: rem;
+    
     position: static;
 }
 
 
 .services_list {
    
-    padding: rem;
+
     margin: 1rem;
     display: flex;
     justify-content: space-between;
@@ -450,7 +451,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.services_cont_tit {
+.services_cnt_ttl {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     font-weight: 700;
@@ -459,7 +460,7 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 }
 
-.services_cont_text {
+.services_cnt_text {
     font-size: var(--tamanho-fonte-texto);
     font-weight: var(--expessura-texto);
     text-align: center;
@@ -505,13 +506,12 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
 
 .contato {
     background-color: var(-cor-terciaria);
-    margin: 2rem;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
     width: auto;
     height: 30rem;
     text-align: center;
+    justify-content: space-around;
     
 }
 
@@ -531,7 +531,6 @@ background: linear-gradient(180deg, rgba(9,29,6,1) 0%, rgba(38,96,50,1) 35%, rgb
     font-size: var(--tamanho-fonte-text);
     font-weight: var(--expessura-texto);
     color: var(--cor-principal);
-    margin: 1rem;
     font-size: 2rem;
     text-decoration: none;
     align-self: center;
@@ -563,9 +562,10 @@ transition:color 1s ease;
 }
 
 .footer {
-
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    display: grid;
+    display: flex;
 
 
 
@@ -574,9 +574,10 @@ transition:color 1s ease;
 .footer_list {
     display: flex;
     justify-content: center;
+    align-items: center;
     list-style-type: none;
-    width: 100%;
-    height: 10rem;
+    justify-content: space-around;
+    
 
 
 
@@ -585,7 +586,7 @@ transition:color 1s ease;
 .links_title {
     display: flex;
     width: min-content;
-    margin-right: 10%;
+    justify-content: center;
     align-items: center;
 
 }
@@ -600,7 +601,7 @@ transition:color 1s ease;
 
 .logo_footer {
     width: 5rem;
-    margin: 4rem 1rem 4rem 5rem;
+    /* margin: 4rem 1rem 4rem 5rem; */
     border: solid 0.5rem #049643;
     border-radius: 100%;
 
@@ -611,18 +612,18 @@ transition:color 1s ease;
 
 .footer_link {
     text-decoration: none;
-    padding: 2rem 0.5rem;
+    /* padding: 2rem 0.5rem; */
 
 }
 
 .footer_links {
     display: flex;
-    margin: 3rem;
+    /* margin: 3rem; */
 
 }
 
 .footer_text {
-    margin: 1.5rem 15%;
+    /* margin: 1.5rem 15%; */
     size: var(--tamanho-fonte-text);
     font-family: var(--fonte-secundaria);
 }
@@ -639,7 +640,10 @@ transition:color 1s ease;
 }
 
 @media (max-width:1292px) {
-    
+    .container_box{
+        
+       
+    }
     
     .contatogeral{
         display: flex;
@@ -681,16 +685,20 @@ transition:color 1s ease;
 @media (max-width: 1140px) {
    .container{
        display: flex;
-       
-   };
+       padding: 0rem 0rem;
+   }
 
     .container_box{
+        border-radius: 0;
         align-items: center;
         justify-content: center;
-        height: auto;
+        padding: 1rem;
+
+        
     }
 
     .container_title{
+        font-size: ;
         text-align: center;
     }
     .teste1{
@@ -756,6 +764,34 @@ transition:color 1s ease;
         cursor: pointer;
     }
   }
+
+
+
+  @media (max-width: 784px) {
+
+    .container4{
+        padding: auto auto;
+    }
+
+    .contatogeral{
+        width: auto;
+        height: auto;
+    }
+
+    .mapa iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    .services_list{
+        margin: 0;
+    }
+
+    .services_item{
+        margin: 0;
+    }
+  }
+
  @media (max-width: 650px) {
 
     .one{
@@ -777,7 +813,7 @@ transition:color 1s ease;
         margin-top: 10rem;
     }
 
-    .services_item:hover{
+    .services_item{
         pointer-events: none;
     }
 }
@@ -807,10 +843,14 @@ transition:color 1s ease;
 }
 
 
-@media (max-width: 373px) {
+@media (max-width: 380px) {
     .cabe_tit2{
         display: none;
     }
+
+    .cabe_links{
+        width:100%;
+        background-color:#14914a;
+        opa
+    }
 }
-
-
