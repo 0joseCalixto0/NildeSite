@@ -201,7 +201,6 @@ body {
     0 0 1em #cabca9fd;
     flex-direction: column;
     gap: 2rem;
-    
     align-items: center;
     text-align: center;
     
@@ -288,18 +287,11 @@ body {
     width: auto;
     text-align: center;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.26);
-    border-radius: 2%;
-    
-
-
-    
-
 }
 
 .img_escola1 {
     width: 100%;
     height: 50%;
-    border-radius: 2%;
 
 
 
@@ -350,7 +342,6 @@ body {
     width: 40vh;
     height: auto;
     background-color: var(--cor-terciaria);
-    border-radius: 2%;
     box-shadow: inset 0 0 2em #cabca9fd,
     0 0 1em #cabca9fd;
     flex-direction: column;
@@ -486,7 +477,7 @@ body {
     margin: 1rem;
     box-shadow: 5px 5px 5px #0000006c;
     /* border-radius: 5rem 5rem 5rem 5rem; */
-    border-radius: 1rem;
+    
 
 
 
@@ -500,7 +491,7 @@ body {
     padding: 1rem;
     background-color: var(--cor-terciaria) ;
     margin:auto;
-    border-radius: 1rem;
+    
 }
 
 
@@ -638,6 +629,12 @@ transition:color 1s ease;
 .footer_link a:hover {
     color: rgb(27, 51, 42);
 }
+@media (min-width: 1700px) {
+   .container_box{
+    margin: 0% 25%;
+   }
+}
+
 
 @media (max-width:1292px) {
     .container_box{
@@ -689,7 +686,7 @@ transition:color 1s ease;
    }
 
     .container_box{
-        border-radius: 0;
+        
         align-items: center;
         justify-content: center;
         padding: 1rem;
@@ -705,7 +702,7 @@ transition:color 1s ease;
         display: none;
        
     }
-    .services_cont{
+    .services_cnt{
         align-self: center;
         
     }
@@ -794,11 +791,11 @@ transition:color 1s ease;
 
  @media (max-width: 650px) {
 
-    .one{
-        
+    .cnt_title{
+        font-size: 2rem;
     }
 
-    .descricao_container{
+    .descricao_cnt{
         margin: 0rem;
         padding:0 ;
     }
@@ -809,7 +806,7 @@ transition:color 1s ease;
         flex-direction:column ;
     }
 
-    .container_services{
+    .cnt3_services{
         margin-top: 10rem;
     }
 
@@ -837,20 +834,23 @@ transition:color 1s ease;
     
     }
 
-    .descricao_container{
-        border-radius: 0%;
-    }
+    
 }
 
 
 @media (max-width: 380px) {
+
+    .container_box{
+        margin: 0rem 1rem;
+
+    }
     .cabe_tit2{
         display: none;
     }
 
     .cabe_links{
         width:100%;
-        background-color:#14914a;
-        opa
+        /* background-color:#14914a; */
+        
     }
 }
