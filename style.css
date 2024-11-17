@@ -13,8 +13,9 @@
     --cor-quaternaria:rgb(14, 138, 80) ;
     --cor-hover:#2e8364;
     --cor-hover2:#13724cb2;
-    --fonte-principal: 'inter';
+    --fonte-principal: Muli, sans-serif;
     --fonte-secundaria: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --tamanho-fonte-titulo: 2rem;
     --tamanho-fonte-texto: 1.3rem;
     --expessura-texto: 400;
 }
@@ -29,45 +30,16 @@ body {
 .logo_title {
   width: 5rem;
   margin: 0rem 0rem 0.6rem 5rem;
-  border-radius: 50%; /* Adicionei a propriedade border-radius para tornar a imagem redonda */
+  border-radius: 50%; 
+  /* Adicionei a propriedade border-radius para tornar a imagem redonda */
 }
 
 
-.hidden {
-    opacity: 0;
-    filter: blur(15px);
-    transition: all 1s;
-    transform: translateX(-100%);
-
+p{
+    font-family: var(--fonte-principal);
+    
 }
 
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-    transform-style: unset;
-    transition: all 1s;
-
-
-
-
-}
-
-.hidden2 {
-    opacity: 0;
-    filter: blur(15px);
-    transition: all 4s;
-    transform: translateX(-100%);
-
-}
-
-.show2 {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-    transition: all 4s;
-
-}
 
 .cabecalho {
     width: 100%;
@@ -79,7 +51,6 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: fixed;
     z-index: 1;
-    
 }
 
 
@@ -87,16 +58,9 @@ body {
 .logo_cabe {
     display: flex;
     align-items: center;
-    
-    
-    
 }
 .icone {
     width: 5rem;
-    
-
-    
-    
 }
 
 
@@ -108,11 +72,6 @@ body {
     font-family: var(fonte-secundaria);
     text-transform: uppercase;
     letter-spacing: 4px;
-    
-    
-   
-
-
 }
 
 
@@ -127,11 +86,6 @@ body {
     margin: 0;
     padding: 0;
     z-index: 1;
-    
-
-
-
-
 }
 
 
@@ -140,8 +94,6 @@ body {
 .cabe_links li {
     letter-spacing: 2px;
     margin-left: 32px;
-
-
 }
 
 .cabe_text {
@@ -170,7 +122,6 @@ body {
     display: none;
     cursor:pointer;
     z-index: 2;
-
 }
 
 
@@ -185,9 +136,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    
-    
 }
   
 .container_box {
@@ -203,9 +151,6 @@ body {
     gap: 2rem;
     align-items: center;
     text-align: center;
-    
-
-
 }
 
 
@@ -213,19 +158,12 @@ body {
     font-size: 150%;
     color: var(--cor-principal);
     font-weight: var(--expessura-texto);
-    
-    
-    
-
 }
 
 .cnt_title {
     font-size: 300%;
-    font-weight: 700;
+    
     font-family: var(--fonte-secundaria);
-    
-    
-
 }
 
 .feixe {
@@ -233,11 +171,6 @@ body {
     background-color: var(--cor-secundaria);
     width: 6rem;
     height: 0.5rem;
-    
-    
-    
-
-
 }
 
 
@@ -248,11 +181,6 @@ body {
     width: 6rem;
     height: 0.5rem;
     align-items: center;
-
-   
-
-
-
 }
 
 
@@ -270,50 +198,38 @@ body {
     grid-template-columns: 45% 45%;
     column-gap: 4rem;
     justify-content: center;
-   
-   
-
-
-
-
 }
 
 .descricao_cnt {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding: 2rem;
     background-color: var(--cor-terciaria);
     width: auto;
-    text-align: center;
+    text-align: left;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.26);
+    gap: 1rem;
 }
 
 .img_escola1 {
     width: 100%;
     height: 50%;
-
-
-
-
-
-
-
 }
+
 .descricao_title {
     font-size: 2.5rem;
     font-weight: 500;
-    margin: 1rem;
     font-family: var(--fonte-secundaria);
 
 }
 
 .descricao_text {
-
+    text-align: left;
     font-size: var(--tamanho-fonte-texto);
     font-weight: var(--expessura-texto);
     color: var(--cor-principal);
-    margin: 1rem;
+    
     
 
 }
@@ -354,13 +270,13 @@ body {
 
 
 .container3 {
-    
     display: flex;
     height: auto;
     text-align: center;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    
 
 
 
@@ -374,7 +290,9 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    bottom: 0;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 4rem;
 
     
 
@@ -382,17 +300,24 @@ body {
 
 }
 
-
+.services_list {
+    margin: 1rem;
+    display: flex;
+    gap: 5rem;
+    flex-direction: row;
+    align-items: center;
+    
+}
 
 .services_item {
     width: 15rem;
-    height: 24rem;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem;
-    padding: 2rem;
+    align-items: left;
+    padding: 2rem 0 0 2rem;                         
+    gap: 2rem;
+    text-align: left;
 
 
 
@@ -407,55 +332,34 @@ body {
 
 .img_serv {
     width: 12rem;
-    height: 12rem;
-    border-radius: 15%;
-    align-items: center;
-    
-    position: static;
-}
-
-
-.services_list {
-   
-
-    margin: 1rem;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-
-
+    height: auto;
+    border-radius: 0%;
+    margin-top: 1rem;
 
 }
+
+
+
 
 .services_title {
     font-size: 3rem;
     color: var(--cor-principal);
     font-weight: 700;
-    margin: 2rem;
-    margin-top: 4rem;
-    text-align: center;
     font-family: var(--fonte-secundaria);
-
-
-
-
 }
 
 .services_cnt_ttl {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
     font-weight: 700;
-    text-align: center;
-    margin: 2rem;
-
+   
 }
 
 .services_cnt_text {
     font-size: var(--tamanho-fonte-texto);
     font-weight: var(--expessura-texto);
-    text-align: center;
-    margin: rem;
+    
+    
 }
 
 .container4 {
@@ -465,10 +369,6 @@ body {
     display: grid;
     padding: 10%;
     align-items: center;
-    
-    
-    
-    
 }
 
 .mapa iframe {
@@ -477,25 +377,19 @@ body {
     margin: 1rem;
     box-shadow: 5px 5px 5px #0000006c;
     /* border-radius: 5rem 5rem 5rem 5rem; */
-    
-
-
-
-
 }
 
-.contatogeral{
+.contato{
     width: auto;
     display: flex;
     flex-direction: row-reverse;
     padding: 1rem;
     background-color: var(--cor-terciaria) ;
     margin:auto;
-    
 }
 
 
-.contato {
+.descricao_contato {
     background-color: var(-cor-terciaria);
     display: flex;
     flex-direction: column;
@@ -503,7 +397,6 @@ body {
     height: 30rem;
     text-align: center;
     justify-content: space-around;
-    
 }
 
 .icon {
@@ -511,7 +404,6 @@ body {
     margin: 0rem 0rem 1rem 0rem;
     color: var(--cor-secundaria);
     /* border-radius: ; */
-
 }
 
 
@@ -524,8 +416,7 @@ body {
     color: var(--cor-principal);
     font-size: 2rem;
     text-decoration: none;
-    align-self: center;
-   
+    align-self: center;  
 }
 .contatolink {
 width: auto;
@@ -535,10 +426,7 @@ transition:color 1s ease;
 
 }
 .contatolink:hover {
-    color:var(--cor-quaternaria);
-
-    
-
+    color:var(--cor-quaternaria);  
 }
 
 
@@ -548,8 +436,6 @@ transition:color 1s ease;
     font-weight: 500;
     margin: 1rem 1rem 4rem 1rem;
     font-family:  -apple-system,  sans-serif;
-
-
 }
 
 .footer {
@@ -557,9 +443,7 @@ transition:color 1s ease;
     justify-content: center;
     text-align: center;
     display: flex;
-
-
-
+    
 }
 
 .footer_list {
@@ -568,9 +452,7 @@ transition:color 1s ease;
     align-items: center;
     list-style-type: none;
     justify-content: space-around;
-    
-
-
+    gap: 2rem;
 
 }
 
@@ -579,15 +461,12 @@ transition:color 1s ease;
     width: min-content;
     justify-content: center;
     align-items: center;
-
 }
 
 .footer_title {
     font-size: 130%;
     font-weight: 700;
     font-family: var(--fonte-secundaria);
-
-
 }
 
 .logo_footer {
@@ -595,8 +474,7 @@ transition:color 1s ease;
     /* margin: 4rem 1rem 4rem 5rem; */
     border: solid 0.5rem #049643;
     border-radius: 100%;
-
-
+    
 }
 
 
@@ -604,13 +482,11 @@ transition:color 1s ease;
 .footer_link {
     text-decoration: none;
     /* padding: 2rem 0.5rem; */
-
 }
 
 .footer_links {
     display: flex;
     /* margin: 3rem; */
-
 }
 
 .footer_text {
@@ -623,7 +499,6 @@ transition:color 1s ease;
     color: var(--cor-principal);
     font-size: var(--tamanho-fonte-texto);
     text-decoration: none;
-
 }
 
 .footer_link a:hover {
@@ -637,11 +512,6 @@ transition:color 1s ease;
 
 
 @media (max-width:1292px) {
-    .container_box{
-        
-       
-    }
-    
     .contatogeral{
         display: flex;
         flex-direction: column-reverse;
@@ -649,10 +519,6 @@ transition:color 1s ease;
         align-items: center;
     }
     
-    .services_list {
-        /* flex-direction: column; */
-        
-    }
 
     .one{
         justify-items: center;
@@ -660,9 +526,6 @@ transition:color 1s ease;
         grid-template-rows: auto;
     }
     
-    .descricao_container{
-        width: auto;
-    }
 
     .img_escola1{
         grid-area: 2/1;
@@ -795,10 +658,12 @@ transition:color 1s ease;
         font-size: 2rem;
     }
 
-    .descricao_cnt{
-        margin: 0rem;
-        padding:0 ;
+    .descricao_title{
+        font-size: 2rem;
     }
+
+   
+
 
    
 
@@ -834,16 +699,23 @@ transition:color 1s ease;
     
     }
 
+    .container_box{
+        margin: 0rem 1rem;
+
+    }
+
+
     
 }
 
 
 @media (max-width: 380px) {
 
-    .container_box{
-        margin: 0rem 1rem;
 
+    .descricao_cnt{
+        padding:1rem;
     }
+
     .cabe_tit2{
         display: none;
     }
