@@ -13,7 +13,7 @@
     --cor-quaternaria:rgb(14, 138, 80) ;
     --cor-hover:#2e8364;
     --cor-hover2:#13724cb2;
-    --fonte-principal: Muli, sans-serif;
+    --fonte-principal: 'Muli', sans-serif;
     --fonte-secundaria: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --tamanho-fonte-titulo: 2rem;
     --tamanho-fonte-texto: 1.3rem;
@@ -21,10 +21,9 @@
 }
 
 body {
-  background-image: url("./assets/" );
-    background-size: cover;
     background-color: var(--cor-secundaria);
     box-sizing: border-box;
+    
 }
 
 .logo_title {
@@ -35,10 +34,7 @@ body {
 }
 
 
-p{
-    font-family: var(--fonte-principal);
-    
-}
+
 
 
 .cabecalho {
@@ -129,7 +125,7 @@ p{
 .container {
     display: flex;
     filter: unset;
-    height: 92vh;
+    height: 90vh;
     align-items: center; 
     justify-content: center;
     background-image: url("./assets/palmeirasnilde\ \(1\).jpg");
@@ -157,7 +153,7 @@ p{
 .cnt_aviso {
     font-size: 150%;
     color: var(--cor-principal);
-    font-weight: var(--expessura-texto);
+    font-family: var(--fonte-principal);
 }
 
 .cnt_title {
@@ -229,6 +225,7 @@ p{
     font-size: var(--tamanho-fonte-texto);
     font-weight: var(--expessura-texto);
     color: var(--cor-principal);
+    font-family: var(--fonte-principal);
     
     
 
@@ -268,75 +265,49 @@ p{
 }
 
 
-
-.container3 {
+ .container3 {
     display: flex;
-    height: auto;
-    text-align: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    
-
-
-
-
+    padding: 4rem;
+    text-align: center;
 }
 
 .cnt3_services {
     display: flex;
-    height: auto;
-    text-align: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 4rem;
-
-    
-
-
-
+    gap: 2rem;
 }
 
 .services_list {
-    margin: 1rem;
     display: flex;
-    gap: 5rem;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    
+    gap: 2rem;
 }
 
 .services_item {
-    width: 15rem;
-    height: auto;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    padding: 2rem 0 0 2rem;                         
-    gap: 2rem;
-    text-align: left;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--cor-p);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0% 20%;
+  }
 
 
 
-
-}
-
-.services_item:hover {
-    transition: all 2s;
-    transform: scale(150%);
-    background-color: var(--cor-hover2);
-}
-
-.img_serv {
-    width: 12rem;
-    height: auto;
-    border-radius: 0%;
-    
-
-}
+  .services_item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
 
 
 
@@ -358,18 +329,12 @@ p{
 .services_cnt_text {
     font-size: var(--tamanho-fonte-texto);
     font-weight: var(--expessura-texto);
-    
-    
+    font-family: var(--fonte-principal);   
 }
 
-.container4 {
-    align-items: center;
-    filter: unset;
-    display: grid;
-    padding: 10% 0%;
-    justify-content: center;
-    
-}
+
+
+
 
 .mapa iframe {
     width: 32rem;
@@ -379,11 +344,20 @@ p{
     /* border-radius: 5rem 5rem 5rem 5rem; */
 }
 
+.container4 {
+    align-items: center;
+    filter: unset;
+    display: grid;
+    padding: 10% 0%;
+    justify-content: center;
+    
+} 
+
 .contato{
     width: auto;
     display: flex;
     flex-direction: row-reverse;
-    padding: 1rem;
+    padding: 2rem;
     background-color: var(--cor-terciaria);
     
     
@@ -398,6 +372,7 @@ p{
     height: 30rem;
     text-align: center;
     justify-content: space-around;
+
 }
 
 .icon {
@@ -412,6 +387,7 @@ p{
 .contato_text {
     display: flex;
     text-align: center;
+    font-family: var(--fonte-principal);
     font-size: var(--tamanho-fonte-text);
     font-weight: var(--expessura-texto);
     color: var(--cor-principal);
@@ -426,7 +402,7 @@ p{
     transition:color 1s ease;
 
 }
-.contato-link:hover {
+.contato_link:hover {
     color:var(--cor-quaternaria);  
 }
 
@@ -436,7 +412,7 @@ p{
     font-size: 3rem;
     font-weight: 500;
     margin: 1rem 1rem 4rem 1rem;
-    font-family:  -apple-system,  sans-serif;
+    font-family: var(--fonte-principal);
 }
 
 .footer {
@@ -453,6 +429,7 @@ p{
     align-items: center;
     list-style-type: none;
     justify-content: space-around;
+    margin-bottom: 2rem;
     gap: 2rem;
 
 }
@@ -462,6 +439,7 @@ p{
     width: min-content;
     justify-content: center;
     align-items: center;
+    gap:1rem;
 }
 
 .footer_title {
@@ -490,25 +468,33 @@ p{
     /* margin: 3rem; */
 }
 
-.footer_text {
-    /* margin: 1.5rem 15%; */
-    size: var(--tamanho-fonte-text);
-    font-family: var(--fonte-secundaria);
+.footer_link_txt {
+    color: var(--cor-principal);
+    font-size: var(--tamanho-fonte-texto);
+    font-family: var(--fonte-principal);
+    text-decoration: none;
 }
 
 .link_text {
     color: var(--cor-principal);
     font-size: var(--tamanho-fonte-texto);
     text-decoration: none;
+    opacity: 0;
 }
 
-.footer_link a:hover {
+.footer_link_txt:hover {
     color: rgb(27, 51, 42);
+    opacity: 1;
+    transition: 1s  ease-in-out  ;
 }
+
+
 @media (min-width: 1700px) {
    .container_box{
     margin: 0% 25%;
    }
+
+  
 }
 
 
@@ -589,6 +575,7 @@ p{
       opacity: 0;
       transition: transform 1s ease, opacity 1s ease;
       gap: 7rem;
+      pointer-events: none;
       
     }
   
@@ -597,7 +584,7 @@ p{
       opacity: 1;
     }
   
-    .menu-toggle:not(:checked) + .menu-icon + .cabe_links {
+    .menu-toggle:not(:checke) + .menu-icon + .cabe_links {
       transform: translatex(100%);
       opacity: 0;
     }
@@ -620,7 +607,8 @@ p{
     }
     
     .linhas{
-        
+        text-decoration: none;
+        pointer-events: none;
         cursor: pointer;
     }
   }
@@ -651,8 +639,9 @@ p{
  @media (max-width: 650px) {
 
     .mapa iframe{
-        width: 15rem;
+        width: auto;
         height: 15rem;
+        align-self: center;
     }
 
     .cnt_title{
@@ -680,6 +669,15 @@ p{
 
 
 @media (max-width: 520px) {
+
+    .container3{
+        margin: 0;
+    }
+
+
+    .mapa iframe{
+        width: 15rem;
+    }
 
      .contato {
         align-items: center;
@@ -711,7 +709,11 @@ p{
 
 
 @media (max-width: 380px) {
-    
+
+    .contato{
+        padding: 0;
+    }
+
     .cnt3_services{
         margin: 20% 0% ;
     }
@@ -732,3 +734,10 @@ p{
         
     }
 }
+
+ @media (max-zoom): 300px) {
+     
+ }   
+
+  
+ 
