@@ -8,17 +8,23 @@
 
 :root {
     --cor-principal: rgb(0, 0, 0);
-    --cor-secundaria: #05813d;
-    --cor-terciaria: #f8e8d1;
-    --cor-quaternaria:rgb(14, 138, 80) ;
-    --cor-hover:#2e8364;
-    --cor-hover2:#13724cb2;
+    --cor-secundaria: rgb(5, 129, 61);
+    --cor-terciaria: rgb(248, 232, 209);
+    --cor-quaternaria: rgb(14, 138, 80);
+    --cor-hover: rgb(46, 131, 100);
+    --cor-hover2: rgba(46, 87, 30, 0.7);
     --fonte-principal: 'Muli', sans-serif;
     --fonte-secundaria: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --tamanho-fonte-titulo: 2rem;
     --tamanho-fonte-texto: 1.3rem;
     --expessura-texto: 400;
 }
+
+/* --cor-secundaria: #05813d;
+--cor-terciaria: #f8e8d1;
+--cor-quaternaria:rgb(14, 138, 80) ;
+--cor-hover:#2e8364;
+--cor-hover2:#13724cb2; */
 
 body {
     background-color: var(--cor-secundaria);
@@ -30,7 +36,6 @@ body {
   width: 5rem;
   margin: 0rem 0rem 0.6rem 5rem;
   border-radius: 50%; 
-  /* Adicionei a propriedade border-radius para tornar a imagem redonda */
 }
 
 
@@ -42,11 +47,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 7vh;
+    height: auto;
     background-color: var(--cor-terciaria);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     position: fixed;
     z-index: 1;
+    padding-bottom: 5px;
 }
 
 
@@ -89,7 +95,7 @@ body {
 
 .cabe_links li {
     letter-spacing: 2px;
-    margin-left: 32px;
+    
 }
 
 .cabe_text {
@@ -226,9 +232,6 @@ body {
     font-weight: var(--expessura-texto);
     color: var(--cor-principal);
     font-family: var(--fonte-principal);
-    
-    
-
 }
 
 .container2 {
@@ -242,8 +245,6 @@ body {
     left: 0;
     height: 100vh;
     align-items: center;
-    
-
 }
 
 
@@ -259,9 +260,6 @@ body {
     0 0 1em #cabca9fd;
     flex-direction: column;
     gap: 2rem;
-    
-    
-
 }
 
 
@@ -358,9 +356,7 @@ body {
     display: flex;
     flex-direction: row-reverse;
     padding: 2rem;
-    background-color: var(--cor-terciaria);
-    
-    
+    background-color: var(--cor-terciaria); 
 }
 
 
@@ -372,14 +368,12 @@ body {
     height: 30rem;
     text-align: center;
     justify-content: space-around;
-
 }
 
 .icon {
     height: 2rem;
     margin: 0rem 0rem 1rem 0rem;
     color: var(--cor-secundaria);
-    /* border-radius: ; */
 }
 
 
@@ -397,10 +391,8 @@ body {
 }
 .contato_link {
     width: auto;
-    /* box-shadow: 5px 5px 5px #0000006c; */
     padding: 0rem 1rem ;
     transition:color 1s ease;
-
 }
 .contato_link:hover {
     color:var(--cor-quaternaria);  
@@ -420,7 +412,6 @@ body {
     justify-content: center;
     text-align: center;
     display: flex;
-    
 }
 
 .footer_list {
@@ -431,7 +422,6 @@ body {
     justify-content: space-around;
     margin-bottom: 2rem;
     gap: 2rem;
-
 }
 
 .links_title {
@@ -452,8 +442,7 @@ body {
     width: 5rem;
     /* margin: 4rem 1rem 4rem 5rem; */
     border: solid 0.5rem #049643;
-    border-radius: 100%;
-    
+    border-radius: 100%;  
 }
 
 
@@ -550,10 +539,7 @@ body {
         display: none;
        
     }
-    .services_cnt{
-        align-self: center;
-        
-    }
+
 
     
  }
@@ -563,20 +549,16 @@ body {
    
     .cabe_links {
       padding-top: 10%;
-      display: flex;
       flex-direction: column;
-      height:100vh ;
+      height:100vh;
       width: 50%;
       background-color:#f8e8d1;
-      position: absolute;
-      top: 50px;
+      position: fixed;
+      top: 7vh;
       right: 0;
-      transform: translatex(100%);
-      opacity: 0;
+      opacity: 1;
       transition: transform 1s ease, opacity 1s ease;
       gap: 7rem;
-      pointer-events: none;
-      
     }
   
     .menu-toggle:checked + .menu-icon + .cabe_links {
@@ -584,7 +566,7 @@ body {
       opacity: 1;
     }
   
-    .menu-toggle:not(:checke) + .menu-icon + .cabe_links {
+    .menu-toggle:not(:checked) + .menu-icon + .cabe_links {
       transform: translatex(100%);
       opacity: 0;
     }
@@ -595,7 +577,6 @@ body {
   
     .cabe_links li {
       text-align: center;
-      margin: 10px 0;
     }
 
     .linha{
@@ -606,11 +587,6 @@ body {
        
     }
     
-    .linhas{
-        text-decoration: none;
-        pointer-events: none;
-        cursor: pointer;
-    }
   }
 
 
@@ -652,18 +628,6 @@ body {
         font-size: 2rem;
     }
 
-
-    .services_list{
-        flex-direction:column ;
-    }
-
-    .cnt3_services{
-        margin-top: 10rem;
-    }
-
-    .services_item{
-        pointer-events: none;
-    }
 }
 
 
@@ -710,6 +674,10 @@ body {
 
 @media (max-width: 380px) {
 
+    .container3{
+        padding: 1rem;
+    }
+
     .contato{
         padding: 0;
     }
@@ -735,9 +703,18 @@ body {
     }
 }
 
- @media (max-zoom): 300px) {
-     
- }   
+@media (max-width: 290px) {
+
+    .services_list{
+        width: ;: auto;
+    }
+
+    .container3{
+        padding: 0;
+    }
+}
+
+
 
   
  
