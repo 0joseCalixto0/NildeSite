@@ -6,6 +6,8 @@
     padding: 0;
 }
 
+
+
 :root {
     --cor-principal: #000000;
     --cor-secundaria: #007937;
@@ -34,7 +36,6 @@ body {
 
 
 
-
 .cabecalho {
     width: 100%;
     display: flex;
@@ -47,6 +48,7 @@ body {
     z-index: 9;
     padding-bottom: 5px;
 }
+
 
 
 
@@ -116,9 +118,7 @@ body {
 
 
 .menu_icon {
-    flex-direction: column;
     display: none;
-    cursor:all-scroll;
     z-index: 10;
 }
 
@@ -225,11 +225,13 @@ body {
 }
 
 .descricao_text {
-    text-align: left;
+
     font-size: var(--tamanho-fonte-texto);
     font-weight: var(--expessura-texto);
     color: var(--cor-principal);
     font-family: var(--fonte-principal);
+    
+    
 }
 
 .container2 {
@@ -556,25 +558,33 @@ body {
       position: fixed;
       top:54px;
       right: 0;
-      opacity: 1;
       transition: transform 1s ease, opacity 1s ease;
       gap: 7rem;
       z-index: 7;
       margin: auto;
     }
 
-
-  
-    .menu-toggle:checked + .menu-icon + .cabe_links {
-      transform: translatex(0);
-      opacity: 1;
+    .cabe_text{
+        letter-spacing: 5px;
     }
   
-    .menu-toggle:not(:checked) + .menu-icon + .cabe_links {
+     .menu-toggle:checked + .menu-icon + .cabe_links {
       transform: translatex(100%);
       opacity: 0;
-    }
-  
+      
+      
+    } 
+
+   
+      .menu-toggle:not(:checked)+ .menu-icon .x-container {
+        display: block;
+        
+      }
+
+      .menu-toggle:not(:checked)+ .menu-icon .linha {
+        display: none;
+      }
+
     .menu-icon {
       display: block;
     }
@@ -582,6 +592,7 @@ body {
     .cabe_links li {
       text-align: center;
     }
+
 
     .linha{
         width: 32px;
@@ -591,6 +602,34 @@ body {
         
        
     }
+
+
+      .x-container{
+          width: 48px;
+          height: auto;
+          display: none;
+          align-items: center;
+          padding: 1rem 0rem;
+          transition: transform 1s ease, opacity 1s ease;
+
+      }
+      
+      .bar{
+          position: absolute;
+          background-color: var(--cor-principal);
+          width: 46px;
+          height: 2px;
+          transition: transform 1s ease;
+          rotate: 45deg;
+          border: 8px;
+          
+          
+      }
+
+      .bar2{
+          rotate: -45deg;
+      }
+      
     
   }
 
@@ -643,6 +682,13 @@ body {
         margin: 0;
     }
 
+    .cabe_links{
+        width:100%;
+        
+        
+        /* background-color:#14914a; */
+        
+    }
 
     .mapa iframe{
         width: 15rem;
@@ -710,13 +756,7 @@ body {
         display: none;
     }
 
-    .cabe_links{
-        width:100%;
-        
-        
-        /* background-color:#14914a; */
-        
-    }
+
 }
 
 @media (max-width: 290px) {
