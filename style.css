@@ -24,7 +24,7 @@
 body {
     background-color: var(--cor-secundaria);
     box-sizing: border-box;
-    
+
 }
 
 .logo_title {
@@ -47,9 +47,9 @@ body {
     position: fixed;
     z-index: 9;
     padding-bottom: 5px;
+    box-shadow: 0px 0px 40px 10px rgba(0, 0, 0, 0.582);
+    
 }
-
-
 
 
 .logo_cabe {
@@ -85,6 +85,7 @@ body {
     margin: 0;
     padding: 0;
     z-index: 1;
+    
 }
 
 
@@ -92,8 +93,9 @@ body {
 
 .cabe_links li {
     letter-spacing: 2px;
-    
+   
 }
+
 
 .cabe_text {
     font-size: 1rem;
@@ -102,6 +104,8 @@ body {
     text-decoration: none;
     transition: color 1s ease;
 }
+
+
 
 .cabe_text:hover {
     text-decoration: none;
@@ -115,12 +119,15 @@ body {
     cursor:pointer;
 }
 
-
+.section:target {
+    animation: fadeIn 1s;
+  }
 
 .menu_icon {
     display: none;
     z-index: 10;
 }
+
 
 
 
@@ -393,6 +400,7 @@ body {
     font-size: 2rem;
     text-decoration: none;
     align-items: center;
+    gap: 0.4rem;
 }
 
 .contato_link {
@@ -551,21 +559,24 @@ body {
 
     .cabe_links {
       background-color: var(--cor-terciaria);
-      padding-top: 10%;
+      /* padding-top: 10%; */
       flex-direction: column;
       height:100vh;
       width: 50%;
       position: fixed;
-      top:54px;
       right: 0;
+      top: 0;
       transition: transform 1s ease, opacity 1s ease;
       gap: 7rem;
-      z-index: 7;
+      z-index: -7;
       margin: auto;
+      align-items: center;
+      justify-content: center;
     }
 
     .cabe_text{
         letter-spacing: 5px;
+        
     }
   
      .menu-toggle:checked + .menu-icon + .cabe_links {
@@ -699,6 +710,7 @@ body {
         padding: 1rem;
       }
       .contato_text {
+        
         font-size: 1.5rem;
       }
       .contato_title {
